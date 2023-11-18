@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --p-red: hsl(1, 90%, 64%);
+  --p-blue: hsl(219, 85%, 26%);
+  --n-white: hsl(0, 0%, 100%);
+  --n-v-light-grayish-blue-1: hsl(211, 68%, 94%);
+  --n-v-light-grayish-blue-2: hsl(205, 33%, 90%);
+  --n-grayish-blue: hsl(219, 14%, 63%);
+  --n-dark-grayish-blue: hsl(219, 12%, 42%);
+  --n-v-dark-blue: hsl(224, 21%, 14%);
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("./fonts/PlusJakartaSans-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("./fonts/static/PlusJakartaSans-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("./fonts/static/PlusJakartaSans-ExtraBold.ttf");
+  font-weight: 800;
+}
+
+body {
+  background-color: var(--n-v-light-grayish-blue-2);
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+/* Scroll bar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--n-v-light-grayish-blue-2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--n-v-dark-blue);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--n-dark-grayish-blue);
+}
+
+/* Utility classes */
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-space-between {
+  justify-content: space-between;
+}
+
+.flex-space-around {
+  justify-content: space-around;
+}
+
+.centre {
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+}
+
+/* Main content */
+
+.container {
+  background-color: var(--n-white);
+  margin: 3em 2em;
+  border-radius: 2%;
+  padding: 3em;
+  font-family: "Plus Jakarta Sans";
+  max-width: 812px;
+}
+
+/* Upper tab */
+
+.upper {
+  justify-content: space-between;
+  margin-bottom: 2.25em;
+}
+
+.upper__notification__text .count {
+  margin: 0 1em;
+  background: var(--p-blue);
+  color: var(--n-white);
+  padding: 0.25em 0.75em;
+  border-radius: 25%;
+}
+
+.upper .mark__read {
+  color: var(--n-dark-grayish-blue);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Notifications */
+
+.active {
+  border-radius: 15px;
+  background: var(--n-v-light-grayish-blue-1);
+}
+
+.notifications {
+  grid-gap: 1em;
+}
+
+.notification__container {
+  padding: 1em;
+  gap: 1.5em;
+  cursor: pointer;
+}
+
+.notification__image,
+.chess__image {
+  width: 50px;
+  height: 50px;
+}
+
+.notification__text {
+  color: var(--n-dark-grayish-blue);
+  font-weight: 500;
+}
+
+.notification__text strong {
+  color: var(--n-v-dark-blue);
+  margin-right: 0.5em;
+}
+
+.highlighted__normal {
+  color: var(--n-dark-grayish-blue);
+  font-weight: 800;
+  margin-left: 0.5em;
+}
+
+.highlighted__group {
+  color: var(--p-blue);
+  font-weight: 800;
+  margin-left: 0.5em;
+}
+
+.timeStamp {
+  color: var(--n-dark-grayish-blue);
+  font-weight: 500;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: var(--p-red);
+  border-radius: 50%;
+  align-self: center;
+  margin-left: 0.5em;
+}
+
+.notification__message {
+  border: 1px solid var(--n-v-light-grayish-blue-2);
+  border-radius: 5px;
+  margin: 1em 0em;
+  padding: 1em 2em;
+  color: var(--n-dark-grayish-blue);
+  font-weight: 500;
+  transition: 100ms;
+}
+
+.notification__message:hover{
+  background-color: var(--n-v-light-grayish-blue-1);
+}
+
+.last2nd {
+  margin-top: 0.5em;
+}
+
+.Kimberly {
+  width: 100%;
+}
+
+@media screen and (max-width: 680px) {
+  .notification__text, .timeStamp, .notification__message{
+    font-size: .8em;
+  }
+
+  .notification__image, .chess__image{
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .upper__notification__text h1{
+    font-size: 1em;
+  }
+
+  .upper__notification__text .count{
+    padding: 0.2em 0.5em;
+    font-size: 0.75em;
+  }
+
+  .mark__read{
+    font-size: 0.85em;
+  }
+}
+
+@media screen and (max-width: 460px){
+  .container{
+    margin: 0;
+    padding: 2em;
+  }
+}
+
+@media screen and (max-width: 360px){
+  .container{
+    padding: 2em;
+  }
+}
