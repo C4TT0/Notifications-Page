@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/notifications-page-lDyJ11E2dS)
 - Live Site URL: [Add live site URL here](https://c4tt0.github.io/Notifications-Page/)
 
 ## My process
